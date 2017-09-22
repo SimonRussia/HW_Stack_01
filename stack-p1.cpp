@@ -89,7 +89,7 @@ int main() {
 		cout << endl << endl;
 
 		cout << "**** CHAR - Stack *****" << endl;
-		Stack<char> B(2); 	//Создаем объект класса Stack типа int, размера 2.
+		Stack<char> B(2); 	//Создаем объект класса Stack типа char, размера 2.
 		B.push('3'); 		//Добавляем элементы...
 		B.push('3');
 		B.push('-');
