@@ -22,28 +22,11 @@ private:
 
 //Конструктор Stack без параметров.
 template <typename T>
-<<<<<<< HEAD
-Stack <T> :: Stack() : array_size_(size_t(10)), array_(new T[10]), count_(0) {
-//    array_ = new T[array_size_]; 	//Определяем указатель выделенной для массива памятью.
-=======
-Stack <T> :: Stack() {
-    array_size_ = 10; 			//Задаем размер Stack по  умолчанию.
-    array_ = new T[array_size_]; 	//Определяем указатель выделенной для массива памятью.
-    count_ = 0; 			//Устанавливаем значение счетчика.
->>>>>>> add9d6e60d57cd94597adbbcba85bac815e05732
-}
+Stack <T> :: Stack() : array_size_(size_t(10)), array_(new T[10]), count_(0) {}
 
 //Конструктор Stack параметрический.
 template <typename T>
-<<<<<<< HEAD
-Stack <T> :: Stack(size_t s) : array_size_(s), array_(new T[s]), count_(0) {
-//    array_ = new T[array_size_]; 	//Определяем указатель выделенной для массива памятью.
-=======
-Stack <T> :: Stack(size_t s) : array_size_(s) {
-    array_ = new T[array_size_]; 		//Определяем указатель выделенной для массива памятью.
-    count_ = 0; 				//Устанавливаем значение счетчика.
->>>>>>> add9d6e60d57cd94597adbbcba85bac815e05732
-}
+Stack <T> :: Stack(size_t s) : array_size_(s), array_(new T[s]), count_(0) {}
 
 //Деструктор Stack.
 template <typename T>
