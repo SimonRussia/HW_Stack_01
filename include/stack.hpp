@@ -22,17 +22,14 @@ private:
 
 //Конструктор Stack без параметров.
 template <typename T>
-Stack <T> :: Stack() {
-	array_size_ = 10; 				//Задаем размер Stack по  умолчанию.
-    array_ = new T[array_size_]; 	//Определяем указатель выделенной для массива памятью.
-    count_ = 0; 					//Устанавливаем значение счетчика.
+Stack <T> :: Stack() : array_size_(size_t(10)), array_(new T[10]), count_(0) {
+//    array_ = new T[array_size_]; 	//Определяем указатель выделенной для массива памятью.
 }
 
 //Конструктор Stack параметрический.
 template <typename T>
-Stack <T> :: Stack(size_t s) : array_size_(s) {
-    array_ = new T[array_size_]; 	//Определяем указатель выделенной для массива памятью.
-    count_ = 0; 					//Устанавливаем значение счетчика.
+Stack <T> :: Stack(size_t s) : array_size_(s), array_(new T[s]), count_(0) {
+//    array_ = new T[array_size_]; 	//Определяем указатель выделенной для массива памятью.
 }
 
 //Деструктор Stack.
@@ -52,11 +49,9 @@ void Stack <T> :: push(T const &val) {
 		array_size_ *= 2;
 		delete[] array_; 			//Освобождаем память старого массива
 		array_ = array_exp_; 		//Переопределяем указатель.
-
-		array_[count_++] = val;
-	} else {
-		array_[count_++] = val; 	//Добавляем значение в массив по ссылке.
 	}
+
+	array_[count_++] = val; 	//Добавляем значение в массив по ссылке.
 }
 
 //Функцию pop.
